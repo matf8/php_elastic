@@ -7,13 +7,26 @@
         $productos = new Producto(); ?>  
     </head>
     <body>       
-        <?php if (isset($_SESSION['allProducts']) && $_SESSION['allProducts'] == true) { 
+        <?php 
+        function img64($data) {
+            if (preg_match('%^[a-zA-Z0-9/+]*={0,2}$%', $data))  {   
+                return true;
+            } else {         
+                return false;     
+            }
+        }
+        if (isset($_SESSION['allProducts']) && $_SESSION['allProducts'] == true) { 
             $productos = $productos->listar_productos(); ?>       
             <div class="row row-cols-5 g-5">
                 <?php foreach ($productos as $p): { ?>
                 <div class="col"> 
                     <div class="card text-white bg-dark border-primary" style="max-width: 18rem;">
-                        <img src="data:image/jpg;base64,<?php echo base64_encode($p['imagen']) ?>" class="card-img-top img-thumbnail">
+                        <img src="data:image/jpg;base64,<?php $img = $p['imagen'];
+                                                                if (!img64($img)) 
+                                                                    $img = base64_encode($img);
+                                                                echo $img 
+                        
+                         ?>" class="card-img-top img-thumbnail">
                     <div class="card-body">
                         <p class="card-title text-center"><?php echo $p['nombre'] . " - " . $p['categoria'] ?> </p>
                         <p class="card-text fw-light fst-italic"> <?php echo $p['descripcion'] ?> </p>

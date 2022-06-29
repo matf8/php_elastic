@@ -25,7 +25,7 @@
                         </div>
                         <div class="col-md-10">
                             <p>
-                                <strong><?php echo '#' . $comentarios[$i]['idComentario'] . $comentarios[$i]['nombre']?></strong>
+                                <strong><?php echo '#' . $comentarios[$i]['idComentario'] . ' ' .$comentarios[$i]['nombre']?></strong>
                                 <?php for ($j=1; $j <= $comentarios[$i]['valoracion']; $j++) { ?>  
                                     <span class="float-end"><i class="text-warning fa fa-star"></i></span>  
                                 <?php } ?>                                  
