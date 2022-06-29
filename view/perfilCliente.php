@@ -44,7 +44,7 @@
                         <th><strong>Producto</strong></th>                            
                     </tr></thead>
                     <tbody id="myTable">
-                    <?php for ($i=0; $i < count($compras); $i++) { ?>                      
+                    <?php $i=0; while ($i < count($compras)) { ?>                      
                         <tr style="display: table-row;">  
                             <td> <?php echo '#' . $compras[$i]['idCompra'] ?> </td>
                             <td> <?php echo $compras[$i]['metodo'] ?> </td>
@@ -59,18 +59,20 @@
                                  <tbody id="myTable">
                                  <?php $productos = $cliente -> listarProductosUsuario($compras[$i]['idCompra']);   
                                     if (isset($productos)) {  
-                                        for ($j=0; $j < count($productos); $j++) { ?>                           
+                                        for ($i=0; $i < count($productos); $i++) { ?>                           
                                             <tr style="display: table-row;">  
-                                                <td> <?php echo $productos[$j]['producto'] ?> </td> 
+                                                <td> <?php echo $productos[$i]['producto'] ?> </td> 
                                                 <?php if (!$cliente->checkComentario($productos[$j]['producto'], $_SESSION['correo'])) { ?>
-                                                    <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$j]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
+                                                    <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$i]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
                                                 <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?> <td>                                     
                                                 </tr>  
                                         <?php }
                                         } ?>
                                     </tbody></table>                                        
                         </tr>                                            
-                    <?php } ?>
+                    <?php 
+                        $i++;
+                         } ?>
                     </tbody></table>                          
                 </div> 
             <?php } ?>        
