@@ -73,10 +73,8 @@
                       $j = $j + $i;
                       } ?>
                     </tbody></table>                          
-                </div> 
-            <?php } ?>        
-        
-  
+             </div> 
+            <?php } ?>         
 
         <div id="mod" class="container mt-5 bg-secondary bg-gradient text-white" style="width: auto; display: none">
             <form action="/TB-ROOT/controller/ClienteController.php" enctype="multipart/form-data" method="post" class="row g-3">

@@ -17,7 +17,7 @@
 				$imgContent = addslashes(file_get_contents($image)); 				
 			} 
 		} else {
-			$filepath = '/TB-ROOT/view/resources/default.jpg';
+			$filepath = '/var/www/webroot/TB-ROOT/view/resources/default.jpg';
             $image = imagecreatefromjpeg($filepath);               
             ob_start(); // Let's start output buffering.
                 imagejpeg($image); //This will normally output the image, but because of ob_start(), it won't.
