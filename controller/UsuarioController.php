@@ -62,7 +62,7 @@
                 $_SESSION['tipo'] = "admin";
                 $_SESSION['username'] = "admin"; 
                 $_SESSION['message'] = 'Sesion iniciada.';  				
-            } 
+            } else $_SESSION['message'] = 'Contrseña incorrecta';
         } else { // no es admin, puede ser cliente
             $q = "select * from clientes where ci='$ci' or correo='$ci';";
 			$res = $dbh->query($q);
@@ -88,7 +88,7 @@
 						}
 						$_SESSION['message'] = 'Sesion iniciada.';	
 					} else $_SESSION['message'] = 'Lo sentimos, su cuenta está pendiente de activación por la administración.'; 	
-                }      
+                } $_SESSION['message'] = 'Contrseña incorrecta';       
             } else {
                 $_SESSION['message'] = 'Datos incorrectos';   
             }
