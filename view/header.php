@@ -343,7 +343,7 @@ button:active {
       <a href="/TB-ROOT/view/perfilCliente.php">  
       <?php $img = $_SESSION['img'];
           if (!($img == '')) { ?>
-          <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 35px">
+          <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 20px">
         <?php } else { ?>
             <img src="/TB-ROOT/view/resources/default.jpg" width="58" height="58" id="circle" style="margin-left: 35px">
         <?php } ?>
