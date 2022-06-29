@@ -49,12 +49,11 @@
                             <td> <?php echo $compras[$j]['metodo'] ?> </td>
                             <td> <?php echo $compras[$j]['total'] ?> </td>
                             <td> <?php echo $compras[$j]['fecha'] ?> </td>
-                            <td> 
+                            <td> <table border="1" class="table table-hover"> 
                             <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
                                   if (isset($productos)) {  
                                        $i=0; 
                                        do { ?>                                         
-                                        <table border="1" class="table table-hover">
                                             <thead>   
                                             <th><strong>Nombre</strong></th>
                                             <th><strong>*</strong></th>
