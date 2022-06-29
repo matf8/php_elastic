@@ -44,7 +44,7 @@
                         <th><strong>Producto</strong></th>                            
                     </tr></thead>
                     <tbody id="myTable">
-                    <?php $i=0; while ($j < count($compras)) { ?>                      
+                    <?php $j=0; while ($j < count($compras)) { ?>                      
                         <tr style="display: table-row;">  
                             <td> <?php echo '#' . $compras[$j]['idCompra'] ?> </td>
                             <td> <?php echo $compras[$j]['metodo'] ?> </td>
