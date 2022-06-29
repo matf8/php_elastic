@@ -64,7 +64,7 @@
                 $_SESSION['message'] = 'Sesion iniciada.';  				
             } 
         } else { // no es admin, puede ser cliente
-            $q = "select * from clientes where ci='$ci';";
+            $q = "select * from clientes where ci='$ci' or correo='$ci';";
 			$res = $dbh->query($q);
 			$user = array();  
 			foreach ($res as $c) 

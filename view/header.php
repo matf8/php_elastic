@@ -293,7 +293,7 @@ button:active {
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-  <a class="navbar-brand" href="/TB-ROOT/index.php"><img src="/TB-ROOT/view/resources/tecno-bay.jpg" width="80" class="img-thumbnail"/></a>
+  <a class="navbar-brand ms-3" href="/TB-ROOT/index.php"><img src="/TB-ROOT/view/resources/tecno-bay.jpg" width="80" class="img-thumbnail"/></a>
   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -418,7 +418,7 @@ button:active {
       
           <div class="form-floating">
             <input class="form-control" id="floatingInput" name="id" required>
-            <label for="floatingInput">Cedula</label>
+            <label for="floatingInput">Cedula / Correo</label>
           </div>
           <div class="form-floating">
             <input type="password" class="form-control" id="floatingPassword" name="pass" required>
