@@ -67,7 +67,7 @@
                                                     <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$i]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
                                                 <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?> <td>                                     
                                                 </tr>  
-                                    <?php $i++; $j++; } while ($i < count($productos));
+                                    <?php $i++;$j+$i;} while ($i < count($productos));
                                     } ?>
                                     </tbody></table>                                        
                         </tr>                                            
