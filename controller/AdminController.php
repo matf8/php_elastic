@@ -24,7 +24,7 @@
 
     if(isset($_POST['editarUser'])) {
       	$pass = password_hash($_POST['Npass'], PASSWORD_DEFAULT);
-        $res = $admin->editarUsuario($_POST['id'], $_POST['Nnombre'], $pass, $_POST['Ncedula'], $_POST['Ncorreo'], $_POST['tipo']);    
+        $res = $admin->editarUsuario($_POST['id'], $_POST['Nnombre'], $pass, $_POST['Ncedula'], $_POST['Ncorreo'], $_POST['tipo'], $_POST['Nfnac']);    
         $_SESSION['message'] = $res;
         header("Location: /TB-ROOT/index.php");
     }

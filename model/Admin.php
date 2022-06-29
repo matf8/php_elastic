@@ -52,10 +52,10 @@ class Admin extends Usuario {
 		}
 	}
 
-	public function editarUsuario($idUsuario, $nombreUsuario, $passUsuario, $cedulaUsuario, $correoUsuario, $tipo) {
+	public function editarUsuario($idUsuario, $nombreUsuario, $passUsuario, $cedulaUsuario, $correoUsuario, $tipo, $fNac) {
 		try {
 			if($tipo == "Cliente") {
-				$sqlUPDATE = "UPDATE clientes SET nombre='$nombreUsuario', ci='$cedulaUsuario', password='$passUsuario', correo='$correoUsuario' WHERE idUsuario='$idUsuario'";
+				$sqlUPDATE = "UPDATE clientes SET nombre='$nombreUsuario', ci='$cedulaUsuario', password='$passUsuario', correo='$correoUsuario', fNac='$fNac' WHERE idUsuario='$idUsuario'";
 			} else if($tipo == "Admin") {
 				$sqlUPDATE = "UPDATE administradores SET ci='$cedulaUsuario', password='$passUsuario' WHERE idUsuario = '$idUsuario'";
 			}

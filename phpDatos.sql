@@ -28,7 +28,7 @@ INSERT INTO `clientes` (`nombre`, `ci`, `password`, `correo`, `fNac`, `imagen`, 
 ('Mathias Fernandez', '5026656', 'tb22', 'mathihd38@gmail.com', '1996-02-10', '', 'Aceptado'),
 ('Carlos Garcia', '4487442', 'tb22', 'charliexstar4@gmail.com', '1991-12-26', '', 'Aceptado'),
 ('Manuel Biurrun', '5346301', 'tb22', 'manu.biurrun@gmail.com', '1999-05-31', '', 'Aceptado'),
-('Juan Rodriguez', '12345678', 'tb22', 'jfrrs@hotmail.com', '1955-06-14', '', 'Aceptado'),
+('Juan Rodriguez', '12345678', 'tb22', 'jfrrsa@gmail.com', '1955-06-14', '', 'Aceptado'),
 ('Martha Gimenez', '87654321', 'tb22', 'martha.gimenez@gmail.com', '1965-03-13', '', 'Aceptado'),
 ('Valeria Curbelo', '12348765', 'tb22', 'docente.valeriacurbelo@gmail.com', '1970-11-25', '', 'Aceptado');
 
