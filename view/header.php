@@ -341,7 +341,12 @@ button:active {
         </div> 
       </div>
       <a href="/TB-ROOT/view/perfilCliente.php">  
-        <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 35px">
+      <?php $img = $_SESSION['img'];
+          if (!($img == '')) { ?>
+          <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 35px">
+        <?php } else { ?>
+            <img src="/TB-ROOT/view/resources/default.jpg" width="58" height="58" id="circle" style="margin-left: 35px">
+        <?php } ?>
       </a>
       <div class="row g-0">                                
         <div class="col-2 mt-2">
