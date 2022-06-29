@@ -70,7 +70,7 @@
                                     </tbody></table>                                        
                         </tr>                                            
                     <?php                         
-                      $j = $j + $i-1;
+                      $j = $j + $i;
                       } ?>
                     </tbody></table>                          
                 </div> 
