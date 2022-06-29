@@ -352,7 +352,7 @@ button:active {
         <div class="col-2 mt-2">
             <ul>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle me-3" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo $_SESSION['username'] ?></a>
+                    <a class="nav-link dropdown-toggle me-5" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo $_SESSION['username'] ?></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><form action="/TB-ROOT/controller/UsuarioController.php" name="cerrarSesion" method="post" >
                         <input type="hidden" name="cerrarSesion">

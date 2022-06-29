@@ -162,7 +162,7 @@ class Producto extends Catalogo {
             if (count($stock) == 1)
 			    $sqlUPDATE = "UPDATE productos SET stock = stock + '$cant' WHERE nombre='$nombreProductoAg'";			
 			    $this->dbh->query($sqlUPDATE);		
-                return "Stock " . $nombre . " modificado con éxito!!";           
+                return "Stock " . $nombreProductoAg . " modificado con éxito!!";           
 		} catch (Exception $e) {
 			return 'Falló la conexión: ' . $e->getMessage();
 		}    
