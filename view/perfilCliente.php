@@ -57,7 +57,8 @@
                                  <th><strong>*</strong></th>
                                  </tr></thead>
                                  <tbody id="myTable">
-                                 <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']);   
+                                 <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
+                                 $j++;  
                                     if (isset($productos)) {  
                                         for ($i=0; $i < count($productos); $i++) { ?>                           
                                             <tr style="display: table-row;">  
