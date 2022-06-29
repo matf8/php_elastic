@@ -1,1 +1,3 @@
-RewriteRule ^(.*)$ index.php/$1 [PT,L]  
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ index.php/$1 [L,R=301]
