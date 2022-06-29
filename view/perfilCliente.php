@@ -49,27 +49,27 @@
                             <td> <?php echo $compras[$j]['metodo'] ?> </td>
                             <td> <?php echo $compras[$j]['total'] ?> </td>
                             <td> <?php echo $compras[$j]['fecha'] ?> </td>
-                            <td> 
-                            <table border="1" class="table table-hover">
-                                <thead>   
-                                 <th><strong>Nombre</strong></th>
-                                 <th><strong>*</strong></th>
-                                 </tr></thead>
-                                 <tbody id="myTable">
-                                 <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
-                                       $j++;  
-                                       if (isset($productos)) {  
-                                            $i=0; 
-                                            do { ?>                           
-                                                <tr style="display: table-row;">  
-                                                    <td> <?php echo $productos[$i]['producto'] ?> </td> 
-                                                    <?php if (!$cliente->checkComentario($productos[$i]['producto'], $_SESSION['correo'])) { ?>
-                                                        <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$i]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
-                                                    <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?> <td>                                     
-                                                    </tr>  
-                                        <?php $i++; } while ($i < count($productos));
-                                        } ?>
-                                </tbody></table>                                        
+                            <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
+                                  $j++;
+                                  if (isset($productos)) {  
+                                       $i=0; 
+                                       do { ?> 
+                                        <td> 
+                                        <table border="1" class="table table-hover">
+                                            <thead>   
+                                            <th><strong>Nombre</strong></th>
+                                            <th><strong>*</strong></th>
+                                            </tr></thead>
+                                            <tbody id="myTable">                                                                    
+                                            <tr style="display: table-row;">  
+                                                <td> <?php echo $productos[$i]['producto'] ?> </td> 
+                                                <?php if (!$cliente->checkComentario($productos[$i]['producto'], $_SESSION['correo'])) { ?>
+                                                    <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$i]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
+                                                <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?> <td>                                     
+                                                </tr>  
+                                    <?php $i++; $j++; } while ($i < count($productos));
+                                    } ?>
+                                    </tbody></table>                                        
                         </tr>                                            
                     <?php                         
                          } ?>
