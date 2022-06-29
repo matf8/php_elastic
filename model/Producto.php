@@ -33,7 +33,7 @@ class Producto extends Catalogo {
 
     public function listarProductosPorCategoria($categoria) {
         try {
-            $sqlSELECT = "SELECT * FROM productos WHERE categoria='$categoria'";        
+            $sqlSELECT = "SELECT * FROM productos WHERE categoria='$categoria' ORDER BY categoria";        
             $res = $this->dbh->query($sqlSELECT);
             $prodsByCat = array();       
             foreach ($res as $c) 
