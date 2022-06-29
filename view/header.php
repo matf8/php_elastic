@@ -343,7 +343,7 @@ button:active {
       <a href="/TB-ROOT/view/perfilCliente.php">  
       <?php $img = $_SESSION['img'];
           if (!($img == '')) { ?>
-          <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 20px">
+          <img src="data:image/jpg;base64,<?php echo $_SESSION['img']?>" width="58" height="58" id="circle" style="margin-left: 35px">
         <?php } else { ?>
             <img src="/TB-ROOT/view/resources/default.jpg" width="58" height="58" id="circle" style="margin-left: 35px">
         <?php } ?>
@@ -352,7 +352,7 @@ button:active {
         <div class="col-2 mt-2">
             <ul>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo $_SESSION['username'] ?></a>
+                    <a class="nav-link dropdown-toggle me-3" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <?php echo $_SESSION['username'] ?></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><form action="/TB-ROOT/controller/UsuarioController.php" name="cerrarSesion" method="post" >
                         <input type="hidden" name="cerrarSesion">
