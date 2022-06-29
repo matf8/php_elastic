@@ -44,12 +44,12 @@
                         <th><strong>Producto</strong></th>                            
                     </tr></thead>
                     <tbody id="myTable">
-                    <?php $i=0; while ($i < count($compras)) { ?>                      
+                    <?php $i=0; while ($j < count($compras)) { ?>                      
                         <tr style="display: table-row;">  
-                            <td> <?php echo '#' . $compras[$i]['idCompra'] ?> </td>
-                            <td> <?php echo $compras[$i]['metodo'] ?> </td>
-                            <td> <?php echo $compras[$i]['total'] ?> </td>
-                            <td> <?php echo $compras[$i]['fecha'] ?> </td>
+                            <td> <?php echo '#' . $compras[$j]['idCompra'] ?> </td>
+                            <td> <?php echo $compras[$j]['metodo'] ?> </td>
+                            <td> <?php echo $compras[$j]['total'] ?> </td>
+                            <td> <?php echo $compras[$j]['fecha'] ?> </td>
                             <td> 
                             <table border="1" class="table table-hover">
                                 <thead>   
@@ -71,7 +71,7 @@
                                     </tbody></table>                                        
                         </tr>                                            
                     <?php 
-                        $i++;
+                        $j++;
                          } ?>
                     </tbody></table>                          
                 </div> 
