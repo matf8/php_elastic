@@ -88,10 +88,9 @@
 						}
 						$_SESSION['message'] = 'Sesion iniciada.';	
 					} else $_SESSION['message'] = 'Lo sentimos, su cuenta está pendiente de activación por la administración.'; 	
-                } $_SESSION['message'] = 'Contrseña incorrecta';       
-            } else {
-                $_SESSION['message'] = 'Datos incorrectos';   
-            }
+                } else $_SESSION['message'] = 'Contrseña incorrecta';       
+            } else $_SESSION['message'] = 'Datos incorrectos';   
+            
         }	
 		header("Location: /TB-ROOT/index.php");			
     }
