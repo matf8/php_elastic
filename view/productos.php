@@ -26,7 +26,7 @@
                                                                     $img = base64_encode($img);
                                                                 echo $img 
                         
-                         ?>" class="card-img-top img-thumbnail">
+                         ?>" class="img-thumbnail">
                     <div class="card-body">
                         <p class="card-title text-center"><?php echo $p['nombre'] . " - " . $p['categoria'] ?> </p>
                         <p class="card-text fw-light fst-italic"> <?php echo $p['descripcion'] ?> </p>
