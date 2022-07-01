@@ -17,7 +17,7 @@
         }
         if (isset($_SESSION['allProducts']) && $_SESSION['allProducts'] == true) { 
             $productos = $productos->listar_productos(); ?>       
-            <div class="row row-cols-5 g-5">
+            <div class="row row row-cols-2 row-cols-lg-5 g-2 lg-3">
                 <?php foreach ($productos as $p): { ?>
                 <div class="col"> 
                     <div class="card text-white bg-dark border-primary" style="max-width: 18rem;">
