@@ -15,7 +15,7 @@
             ?>
             <div class="container mt-5 bg-secondary bg-gradient text-white" style="width: auto">       
             <h2> Editar catalogo - <?php echo $cat ?> </h2> </br>    
-                <form action="TB-ROOT/controller/AdminController.php" method="post">
+                <form action="/TB-ROOT/controller/AdminController.php" method="post">
                     <div class="col-md-3">
                         <label for="validationDefault01" class="form-label">Nombre categoría</label>
                         <input type="text" class="form-control" id="validationDefault01" name="Nnombre" value="<?php echo htmlspecialchars($cat)?>"/>
