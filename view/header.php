@@ -311,7 +311,7 @@ button:active {
   </ul>
   <div class="d-flex">
     <a class="btn btn-outline-success" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Iniciar sesión</a>
-    <a class="btn btn-outline-success" style="margin-left: 5px" href="view/registrarse.php" role="button">Registrarse</a>
+    <a class="btn btn-outline-success" style="margin-left: 5px" href="/TB-ROOT/view/registrarse.php" role="button">Registrarse</a>
   </div>
 
 <?php } else if (isset($_SESSION["loggedin"]) && !strcmp($_SESSION["tipo"],"cliente")) { ?>

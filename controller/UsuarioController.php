@@ -48,7 +48,7 @@
 		die;
 	}
 
-	function iniciarSesion($ci, $pass) {
+	function iniciarSesion($ci, $pass) {		
         $dbh = new PDO('mysql:host=node2692-tecno-bay.web.elasticloud.uy;dbname=tecnobaydb', "php", "tecnoinfphp");
         $q = "select * from administradores where ci='$ci';";
         $res = $dbh->query($q);
@@ -76,6 +76,7 @@
 					if ($estado == 'Aceptado') {
 						$_SESSION['loggedin'] = true;
 						$_SESSION['tipo'] = "cliente";
+						$_SESSION['ci'] = $user[0]['idUsuario'];
 						$_SESSION['idCliente'] = $user[0]['idUsuario'];  
 						$_SESSION['correo'] = $user[0]['correo'];  
 						$_SESSION['username'] = $user[0]['nombre'];  
