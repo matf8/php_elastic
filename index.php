@@ -85,7 +85,7 @@ $productosIndex = $producto -> listar_productos();
             <!-- ////////LISTA DE COMPRAS/////////// -->
 
             <?php if (isset($_SESSION['compras'])) { ?>
-                <div class="container mt-5 bg-secondary bg-gradient text-white" style="width: auto">
+                <div class="container mt-5 bg-secondary bg-gradient text-white" style="width: 800px">
                     <h3>Compras realizadas en Tecno-Bay</h3></br> 
 
                     <?php $compras = json_decode($_SESSION['compras'], true); ?>
