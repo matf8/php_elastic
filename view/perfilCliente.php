@@ -50,24 +50,25 @@
                             <td> <?php echo $compras[$j]['total'] ?> </td>
                             <td> <?php echo $compras[$j]['fecha'] ?> </td>
                             <td> <table border="1" class="table table-hover"> 
-                            <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
-                                  if (isset($productos)) {  
-                                       $i=0; 
-                                       do { ?>                                         
-                                            <thead>   
-                                            <th><strong>Nombre</strong></th>
-                                            <th><strong>*</strong></th>
-                                            </tr></thead>
-                                            <tbody id="myTable">                                                                    
-                                            <tr style="display: table-row;">  
+                                    <thead>   
+                                        <th><strong>Nombre</strong></th>
+                                        <th><strong>*</strong></th>
+                                    </thead>
+                                    <tbody id="myTable">                                                                    
+                                    <tr style="display: table-row;">  
+                                    <?php $productos = $cliente -> listarProductosUsuario($compras[$j]['idCompra']); 
+                                        if (isset($productos)) {  
+                                            $i=0; 
+                                            do { ?>                                    
                                                 <td> <?php echo $productos[$i]['producto'] ?> </td> 
                                                 <?php if (!$cliente->checkComentario($productos[$i]['producto'], $_SESSION['correo'])) { ?>
                                                     <td> <a href="/TB-ROOT/view/comentarProducto.php?id=<?php echo $productos[$i]['producto']?>"> <input class="btn btn-warning" type="button" value="Valorar producto"/> </a> </td>                                         
-                                                <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?> <td>                                     
-                                                </tr>  
+                                                <?php } else { ?> <td> <button disabled class="btn btn-warning" type="button"> Valorar producto </button> </td> <?php } ?>                                     
+                                    </tr>  
                                     <?php $i++; } while ($i < count($productos));
-                                    } ?>
-                                    </tbody></table>                                        
+                                        } ?>                             
+                                    </tbody></table> 
+                             <td>                                       
                         </tr>                                            
                     <?php                         
                       $j = $j + $i;
